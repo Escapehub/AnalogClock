@@ -11,11 +11,18 @@ class Hand : public sf::RectangleShape
 {
 public:
     enum HandType { SECOND = 0, MINUTE = 1, HOUR = 2 };
-    
+
+private:
+    int m_currentNumber;
+    int m_faceNumbers;
 public:
-    Hand(float, int);
+    Hand(float, float, int);
 
     void Increment();
+
+    void setTime(int);
+
+    int getCurrentNumber() { return this->m_currentNumber; }
 };
 
 typedef Hand* pHand;
