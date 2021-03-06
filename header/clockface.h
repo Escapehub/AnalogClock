@@ -8,12 +8,16 @@ class ClockFace
 private:
     sf::CircleShape* m_face;
     pHand m_second;
+    pHand m_minute;
+    pHand m_hour;
 public:
-    ClockFace(float);
+    ClockFace(float, float);
 
     void Draw(sf::RenderWindow&);
 
-    pHand getHand() { return this->m_second; }
+    pHand getSecond() { return this->m_second; }
+    pHand getMinute() { return this->m_minute; }
+    pHand getHour() { return this->m_hour; }
 };
 
 typedef ClockFace* pClockFace;
