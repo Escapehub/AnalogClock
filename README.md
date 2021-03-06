@@ -1,7 +1,8 @@
 # Analog Clock
 
-
 An analog clock written in SFML and c++
+
+![clock](readme/analogclock.gif)
 
 ## Compile
 
