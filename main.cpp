@@ -10,7 +10,7 @@ int main()
     std::time_t now = std::time(nullptr);
     std::tm tt = *std::localtime(std::addressof(now));
 
-    clockface->getSecond()->setTime(tt.tm_min);
+    clockface->getSecond()->setTime(tt.tm_sec);
     clockface->getMinute()->setTime(tt.tm_min);
     clockface->getHour()->setTime(tt.tm_hour - 12);
 
